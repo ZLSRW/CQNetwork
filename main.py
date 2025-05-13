@@ -80,7 +80,7 @@ if __name__ == '__main__':
                             print('-' * 99)
                             trainData = np.load(
                                 './Pre-Encoding/data/' + str(seq_types[j]) + '/Train_Test/all/TrainData' + str(
-                                    i) + '.npy', allow_pickle=True).tolist()  # 数组中的存储顺序为：二级结构图、onehot标签、一级结构图、公共特征
+                                    i) + '.npy', allow_pickle=True).tolist() 
                             testData = np.load(
                                 './Pre-Encoding/data/' + str(seq_types[j]) + '/Train_Test/all/TestData' + str(
                                     i) + '.npy', allow_pickle=True).tolist()
@@ -122,29 +122,4 @@ if __name__ == '__main__':
             print(str(seq_types[j]) + '_train_validation done!')
             j += 1
 
-    if args.evaluate:
-        print(args.evaluate)
 
-    if args.inverse:  # 暂时只在rat_liver数据集上进行验证
-        print("Inverse begin!")
-        # 读取模型验证集的输出
-        x1_name = './Pre-Encoding/data/' + str(seq_types[0]) + '/xx2/Train_Test_Feature/valid_x1_feature0.npy'
-        x2_name = './Pre-Encoding/data/' + str(seq_types[0]) + '/xx2/Train_Test_Feature/valid_x2_feature0.npy'
-
-        Elom_feature_name = './Pre-Encoding/data/' + str(seq_types[0]) + '/Train_Test_Feature/initial_feature0.npy'
-
-        # 以100查看计算效果
-        x1 = np.load(x1_name).tolist()[:100]
-        x1 = remove_last_element(x1)
-        x2 = np.load(x2_name).tolist()[:100]
-        x2 = remove_last_element(x2)
-
-        Elom_feature = np.load(Elom_feature_name).tolist()[:100]
-        # print(len(x1))
-        # print(len(Elom_feature))
-
-        result_train_file = 'output/ISGN-本地/rat_liver/'
-        G1, G2 = inverse_validate_process(args, result_train_file, x1, x2, Elom_feature, Elom_feature)
-        print('可逆验证完成')
-        # print(G1[0])
-        # print(G2[0])
