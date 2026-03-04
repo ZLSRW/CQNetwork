@@ -5,7 +5,7 @@
 ## Requirements
 
 ```
-Python 3.8.20
+Python 3.7
 PyTorch = 1.8.0
 numpy = 1.19.5
 torch-geometric = 2.0.4
@@ -71,4 +71,5 @@ The raw data and preprocessing process can be found in the *Pre-Encoding* folder
   ```
 
   
+
 
