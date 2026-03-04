@@ -27,7 +27,7 @@ The raw data and preprocessing process can be found in the *Pre-Encoding* folder
 - `Dataset`: The processed data, including primary and secondary structure information.
 
   -  `benchmark`:  Original data of the model.
-  - ` independent`:Original independent data of the model.
+  - `independent`: Original independent data of the model.
   - `Tissue Specific`: The folder for storing the processed data.
 
 - `Preprocess`: Contains four Python files. Executing them in sequence will generate the input data for model training and validation.
@@ -71,5 +71,6 @@ The raw data and preprocessing process can be found in the *Pre-Encoding* folder
   ```
 
   
+
 
 
