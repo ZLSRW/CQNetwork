@@ -1,0 +1,21 @@
+{
+  "config": {
+    "device": "cpu",
+    "epochs": 1,
+    "batch_size": 4,
+    "lr": 0.008,
+    "sample_csv": "sample_data/cqnetwork_toy_sequences.csv",
+    "train_npy": null,
+    "valid_npy": null
+  },
+  "metrics": {
+    "MCC": null,
+    "AUC": 0.5,
+    "AUPR": 0.25,
+    "F1": null,
+    "Acc": 0.6667,
+    "Sen": 0.0,
+    "Spec": 1.0,
+    "Prec": null
+  }
+}
